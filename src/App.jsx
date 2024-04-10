@@ -28,6 +28,7 @@ const App = () => {
       setError(null);
       const data = await fetchImages(searchQuery);
       if (data.length === 0) {
+        setImages([]);
         setError("No images found for this search query.");
       } else {
         setImages(data);
